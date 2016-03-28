@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			* {
+				margin: 0;
+				padding: 0 ;
+			}
+			body {
+				background-color: rgba(0,0,0,0);
+			}
+			.su {
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+			
+			button {
+				padding: 10px 20px;
+				margin: 5px;
+			}
+			
+		</style>
+		
+		<script type="text/javascript" src="javascript.toast.0.2.js" ></script>
+		<script>
+			window.onload = function(){
+				
+				var aa = new Toast();
+				
+				document.getElementById("default").addEventListener("click",function(){
+					aa.show("这是一个默认的提示框");
+				});
+				
+				document.getElementById("info").addEventListener("click",function(){
+					aa.info("这个是信息提示框！");
+				});
+				
+				document.getElementById("error").addEventListener("click",function(){
+					aa.error("这个是错误的提示框！");
+				});
+				
+				document.getElementById("warning").addEventListener("click",function(){
+					aa.warning("这个是警告的提示框");
+				});
+				
+				document.getElementById("duo").addEventListener("click",function(){
+					aa.show("这个是 多行 多行 多行 多行 多行 多行 多行 多行 多行 多行 多行 多行 多行 多行 多行 的提示框");
+				});
+				
+			};
+		</script>
+	</head>
+	<body>
+		
+		<div class="su">
+			<button id="default">默认</button><br />
+			<button id="info">信息</button><br />
+			<button id="error">错误</button><br />
+			<button id="warning">警告</button><br />
+			
+			<button id="duo">多行的提示</button><br />
+			
+		</div>
+		
+		
+		
+		
+	</body>
+</html>
